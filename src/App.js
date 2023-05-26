@@ -1,6 +1,7 @@
 import './App.css';
 import $, { isEmptyObject } from 'jquery';
 import {useEffect , useState} from 'react';
+require('dotenv').config();
 function App() {
 
   const [inputCity, setInputCity] = useState("")
@@ -11,7 +12,7 @@ function App() {
 
   const getWetherDetails = async(cityName) => {
     if (!cityName) return
-    const apiURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid=99f77181af3fd5fd82c803e86bf197bb"
+    const apiURL = "https://api.openweathermap.org/data/2.5/weather?q=" + cityName + "&appid="+ process.env.API_KEY;
     try{
     const response = await fetch(apiURL);
     const resjson = await response.json();
