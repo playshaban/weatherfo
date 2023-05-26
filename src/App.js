@@ -65,7 +65,7 @@ function App() {
     $(".Moreinfo").toggle(100);
   }
 
-  //https://api.openweathermap.org/data/2.5/weather?q={city name}&appid=99f77181af3fd5fd82c803e86bf197bb
+
   
 
 
